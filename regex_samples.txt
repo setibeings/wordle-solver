@@ -1,0 +1,15 @@
+(?=[^STAM]{5})(?=.*E)^..[^E]..$
+(?=[^STAMCLON]{5})^..[^E].E$
+(?=[^STAMCLONBIG]{5})(?=.*E.*E)^.[^E][^E].E$
+(?=[^STAMCLONBIGXD]{5})(?=.*E.*E)(?=[^U])^[^E][^E][^EU].E$
+(?=[^STAMCLONBIGXD]{5})(?=.*E.*E)(?=.*P)(?=.*R)^[^EP][^E][^EUR].E$
+
+forbidden letters: (?=[^STAMCLONBIGXD]{5})
+How to read: Positive lookahead for inverted character match. In other words, the  solution must have 5 letters that are none of the above.
+
+(?=.*E.*E)(?=.*P)(?=.*R)
+How to Read: Find E at any position, then find another E at any later point. Same for the other letters.
+
+
+Positional info: ^[^EP][^E][^ER].E$
+How to read: Individual information about what each character is and isn't
