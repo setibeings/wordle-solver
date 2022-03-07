@@ -8,7 +8,7 @@ const include_letters = Deno.args[1].toLowerCase();
 
 let include_pattern = "";
 
-for (let i = 0; i <= include_letters.length / 2; i += 2) {
+for (let i = 0; i < include_letters.length; i += 2) {
     const number = Number(include_letters[i]);
     const letter_pattern = ".*" + include_letters[i + 1];
     include_pattern += "(?=" + letter_pattern.repeat(number) + ")";
